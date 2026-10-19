@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Escalada · mi pasión</title>
+<style>
+:root{--bg:#f6f1ea;--fg:#2a2420;--muted:#7a6d62;--card:#fffaf3;--line:#e2d6c7;--acc:#d9531e;--rock:#b9a48d;--rock2:#9c8670;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1815;--fg:#f1e9df;--muted:#a79a8d;--card:#252019;--line:#3a3128;--acc:#ff7a45;--rock:#5b4d40;--rock2:#463b31}}
+:root[data-theme="dark"]{--bg:#1b1815;--fg:#f1e9df;--muted:#a79a8d;--card:#252019;--line:#3a3128;--acc:#ff7a45;--rock:#5b4d40;--rock2:#463b31}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--fg);font-family:Georgia,'Times New Roman',serif;line-height:1.4}
+.page{display:none;flex-direction:column;align-items:center;min-height:100vh;padding:18px 18px 12px;max-width:760px;margin:0 auto}
+.page.on{display:flex}
+h1{font-size:clamp(1.8rem,7vw,2.8rem);margin:.1em 0 .3em;letter-spacing:-.02em}
+h1 span{color:var(--acc)}
+.wall{width:100%;height:66vh;min-height:300px}
+.list{width:100%;display:grid;gap:12px;margin-top:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.card b{font-size:1.5rem;display:block}
+.card i{color:var(--muted)}
+.card .l2{margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
+nav{margin-top:auto;padding-top:14px;display:flex;align-items:center;gap:14px}
+.dots{display:flex;gap:8px}
+.dots span{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.dots span.on{background:var(--acc)}
+button{width:52px;height:52px;border-radius:50%;border:0;background:var(--acc);color:#fff;font-size:1.6rem;cursor:pointer}
+button.ghost{background:var(--card);color:var(--fg);border:1px solid var(--line)}
+button[hidden]{visibility:hidden}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<path id="h" d="M0 8 Q-12 0 -4 -9 Q8 -12 13 -2 Q16 9 0 8Z"/>
+<pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2.5" fill="var(--rock2)"/></pattern>
+<g id="qd"><rect x="-4" y="0" width="8" height="26" rx="3" fill="#2f8f6b"/><rect x="-6" y="-14" width="12" height="18" rx="6" fill="none" stroke="#8d99a6" stroke-width="3"/><rect x="-6" y="22" width="12" height="18" rx="6" fill="none" stroke="#8d99a6" stroke-width="3"/></g>
+</defs>
+</svg>
+
+<!-- Página 1 -->
+<section class="page on">
+<h1>La <span>escalada</span></h1>
+<svg class="wall" viewBox="0 0 400 560" role="img" aria-label="Muro de escalada con presas">
+<rect x="40" y="20" width="320" height="520" rx="6" fill="var(--rock)"/>
+<rect x="40" y="20" width="320" height="520" rx="6" fill="url(#dots)"/>
+<g stroke="var(--rock2)" stroke-width="3"><line x1="40" y1="150" x2="360" y2="150"/><line x1="40" y1="280" x2="360" y2="280"/><line x1="40" y1="410" x2="360" y2="410"/><line x1="200" y1="20" x2="200" y2="540"/></g>
+<ellipse cx="270" cy="345" rx="38" ry="22" fill="#3b6fd1" opacity=".85"/>
+<g>
+<use href="#h" transform="translate(100 70) scale(1.6) rotate(-20)" fill="#d9531e"/>
+<use href="#h" transform="translate(250 60) scale(1.3) rotate(30)" fill="#3b6fd1"/>
+<use href="#h" transform="translate(165 130) scale(1.8) rotate(10)" fill="#2f8f6b"/>
+<use href="#h" transform="translate(305 150) scale(1.5) rotate(-40)" fill="#e0b020"/>
+<use href="#h" transform="translate(80 205) scale(1.4) rotate(60)" fill="#b04fa0"/>
+<use href="#h" transform="translate(220 215) scale(2) rotate(0)" fill="#d9531e"/>
+<use href="#h" transform="translate(125 285) scale(1.5) rotate(-15)" fill="#3b6fd1"/>
+<use href="#h" transform="translate(315 270) scale(1.7) rotate(25)" fill="#2f8f6b"/>
+<use href="#h" transform="translate(190 380) scale(1.4) rotate(45)" fill="#e0b020"/>
+<use href="#h" transform="translate(90 385) scale(1.8) rotate(-30)" fill="#d9531e"/>
+<use href="#h" transform="translate(285 420) scale(1.5) rotate(10)" fill="#b04fa0"/>
+<use href="#h" transform="translate(160 455) scale(1.6) rotate(35)" fill="#3b6fd1"/>
+<use href="#h" transform="translate(320 480) scale(1.4) rotate(-20)" fill="#d9531e"/>
+<use href="#h" transform="translate(75 500) scale(1.3) rotate(15)" fill="#2f8f6b"/>
+<use href="#h" transform="translate(240 500) scale(1.7) rotate(-10)" fill="#e0b020"/>
+</g>
+</svg>
+<nav><button hidden class="ghost" aria-label="Anterior">←</button><div class="dots"><span></span><span></span><span></span></div><button aria-label="Siguiente">→</button></nav>
+</section>
+
+<!-- Página 2 -->
+<section class="page">
+<h1>El <span>material</span></h1>
+<div class="list">
+<div class="card"><b>la cuerda</b><i>la corde</i></div>
+<div class="card"><b>las zapatillas de escalada</b><i>les chaussons d’escalade</i></div>
+<div class="card"><b>el sistema de aseguramiento</b><i>le système d’assurage</i><div class="l2"><b>el mosquetón</b><i>le mousqueton</i></div></div>
+<div class="card"><b>el arnés</b><i>le baudrier</i></div>
+<div class="card"><b>la magnesia</b><i>la magnésie</i></div>
+</div>
+<nav><button class="ghost" aria-label="Anterior">←</button><div class="dots"><span></span><span></span><span></span></div><button aria-label="Siguiente">→</button></nav>
+</section>
+
+<!-- Página 3 -->
+<section class="page">
+<h1>La <span>vía</span></h1>
+<svg class="wall" viewBox="0 0 520 560" role="img" aria-label="Muro con cuerda y cintas exprés">
+<rect x="20" y="20" width="320" height="520" rx="6" fill="var(--rock)"/>
+<rect x="20" y="20" width="320" height="520" rx="6" fill="url(#dots)"/>
+<g stroke="var(--rock2)" stroke-width="3"><line x1="20" y1="150" x2="340" y2="150"/><line x1="20" y1="280" x2="340" y2="280"/><line x1="20" y1="410" x2="340" y2="410"/></g>
+<g fill="#d9531e">
+<use href="#h" transform="translate(110 490) scale(1.6) rotate(-20)"/>
+<use href="#h" transform="translate(270 425) scale(1.5) rotate(25)"/>
+<use href="#h" transform="translate(120 350) scale(1.7) rotate(10)"/>
+<use href="#h" transform="translate(270 290) scale(1.5) rotate(-35)"/>
+<use href="#h" transform="translate(110 220) scale(1.6) rotate(40)"/>
+<use href="#h" transform="translate(265 160) scale(1.5) rotate(-10)"/>
+<use href="#h" transform="translate(125 95) scale(1.6) rotate(20)"/>
+</g>
+<g fill="var(--rock2)"><use href="#h" transform="translate(60 420) scale(1.1)"/><use href="#h" transform="translate(310 380) scale(1.1) rotate(50)"/><use href="#h" transform="translate(305 70) scale(1.1) rotate(-30)"/></g>
+<g fill="#8d99a6"><circle cx="195" cy="406" r="4"/><circle cx="210" cy="306" r="4"/><circle cx="200" cy="206" r="4"/><circle cx="210" cy="106" r="4"/><circle cx="205" cy="50" r="5"/></g>
+<path d="M140 560 C165 520 185 480 195 451 S 220 380 210 351 S 190 280 200 251 S 220 180 210 151 S 200 90 205 62" fill="none" stroke="#3b6fd1" stroke-width="4" stroke-linecap="round"/>
+<circle cx="205" cy="60" r="8" fill="none" stroke="#8d99a6" stroke-width="3"/>
+<use href="#qd" x="195" y="420"/><use href="#qd" x="210" y="320"/><use href="#qd" x="200" y="220"/><use href="#qd" x="210" y="120"/>
+<g stroke="var(--muted)" stroke-width="1.5"><line x1="345" y1="335" x2="228" y2="335"/><line x1="345" y1="522" x2="156" y2="522"/></g>
+<g font-family="Georgia,serif"><text x="352" y="333" font-size="16" font-weight="bold" fill="var(--fg)">cinta exprés</text><text x="352" y="352" font-size="14" font-style="italic" fill="var(--muted)">dégaine</text>
+<text x="352" y="520" font-size="16" font-weight="bold" fill="var(--fg)">la cuerda</text><text x="352" y="539" font-size="14" font-style="italic" fill="var(--muted)">la corde</text></g>
+</svg>
+<nav><button class="ghost" aria-label="Anterior">←</button><div class="dots"><span></span><span></span><span></span></div><button aria-label="Volver al inicio">↺</button></nav>
+</section>
+
+<script>
+(function(){
+var pages=[].slice.call(document.querySelectorAll('.page')),i=0;
+function go(n){
+  i=(n+pages.length)%pages.length;
+  pages.forEach(function(p,k){
+    p.classList.toggle('on',k===i);
+    [].forEach.call(p.querySelectorAll('.dots span'),function(d,j){d.classList.toggle('on',j===k)});
+  });
+  window.scrollTo(0,0);
+}
+pages.forEach(function(p,k){
+  var b=p.querySelectorAll('nav button');
+  b[0].addEventListener('click',function(){go(k-1)});
+  b[1].addEventListener('click',function(){go(k+1)});
+  [].forEach.call(p.querySelectorAll('.dots span'),function(d,j){d.classList.toggle('on',j===k)});
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight')go(i+1);
+  if(e.key==='ArrowLeft'&&i>0)go(i-1);
+});
+})();
+</script>
+</body>
+</html>
